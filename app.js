@@ -24,7 +24,13 @@ function calcular() {
     resultado = suma(v1, v2);
   } else if (op === "promedio") {
     resultado = promedio(v1, v2);
+  } else if (operacion === 'logaritmo') {
+  // num1 = número, num2 = base
+  if (num1 <= 0 || num2 <= 0 || num2 === 1) {
+    resultado = "Error: valores inválidos";
+  } else {
+    resultado = logaritmo(num1, num2);
   }
-
+  }
   document.getElementById("resultado").innerText = "Resultado: " + resultado;
 }
