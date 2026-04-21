@@ -1,6 +1,7 @@
 import { suma } from './funciones/suma.js';
 import { promedio } from './funciones/promedio.js';
 import { maximo } from './funciones/maximo.js';
+import { raiz } from './funciones/raiz.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -28,6 +29,9 @@ function calcular() {
   } else if (op === "maximo") {
     resultado = maximo(v1, v2);
   }
-
+  else if (op == "raiz") {
+    resultado = raiz(v1, v2);
+  }
+  
   document.getElementById("resultado").innerText = "Resultado: " + resultado;
 }
