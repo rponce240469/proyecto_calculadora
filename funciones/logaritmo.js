@@ -1,10 +1,10 @@
 // funciones/logaritmo.js
-// Función: log(num, base)
-// Autor: [Gilberto Rodríguez] - G8
+// Funcion: log(num, base)
+// Autor: Gilberto Rodriguez - G8
 
-function logaritmo(num, base) {
+export function logaritmo(num, base) {
   if (num <= 0 || base <= 0 || base === 1) {
-    return "Error: valores inválidos";
+    return "Error: valores invalidos";
   }
   return Math.log(num) / Math.log(base);
 }
