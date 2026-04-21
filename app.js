@@ -1,5 +1,6 @@
 import { suma } from './funciones/suma.js';
 import { promedio } from './funciones/promedio.js';
+import { minimo } from './funciones/minimo.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -24,6 +25,8 @@ function calcular() {
     resultado = suma(v1, v2);
   } else if (op === "promedio") {
     resultado = promedio(v1, v2);
+  } else if (op === "minimo") { 
+    resultado = minimo(v1, v2); 
   }
 
   document.getElementById("resultado").innerText = "Resultado: " + resultado;
