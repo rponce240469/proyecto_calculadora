@@ -1,7 +1,7 @@
 import { suma } from './funciones/suma.js';
 import { promedio } from './funciones/promedio.js';
 import { division } from './funciones/division.js';
-
+//hola
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btnCalcular").addEventListener("click", calcular);
 });
