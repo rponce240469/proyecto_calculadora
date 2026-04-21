@@ -1,5 +1,6 @@
 import { suma } from './funciones/suma.js';
 import { promedio } from './funciones/promedio.js';
+import { logaritmo } from './funciones/logaritmo.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
