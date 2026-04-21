@@ -1,5 +1,6 @@
 import { suma } from './funciones/suma.js';
 import { promedio } from './funciones/promedio.js';
+import { potencia } from './funciones/potencia.js';
 import { raiz } from './funciones/raiz.js';
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -25,6 +26,8 @@ function calcular() {
     resultado = suma(v1, v2);
   } else if (op === "promedio") {
     resultado = promedio(v1, v2);
+  } else if (op === "potencia") {
+    resultado = potencia(v1, v2);
   }
   else if (op == "raiz") {
     resultado = raiz(v1, v2);
