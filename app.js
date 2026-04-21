@@ -1,5 +1,6 @@
 import { suma } from './funciones/suma.js';
 import { promedio } from './funciones/promedio.js';
+import { seno } from './funciones/seno.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -24,6 +25,8 @@ function calcular() {
     resultado = suma(v1, v2);
   } else if (op === "promedio") {
     resultado = promedio(v1, v2);
+  } else if (op === "seno") {
+    resultado = seno(v1);
   }
 
   document.getElementById("resultado").innerText = "Resultado: " + resultado;
