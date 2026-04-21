@@ -1,5 +1,6 @@
 import { suma } from './funciones/suma.js';
 import { promedio } from './funciones/promedio.js';
+import { multiplicacion } from './funciones/multiplicacion.js';
 import { maximo } from './funciones/maximo.js';
 import { raiz } from './funciones/raiz.js';
 
@@ -29,6 +30,13 @@ function calcular() {
   } else if (op === "maximo") {
     resultado = maximo(v1, v2);
   }
+  else if (op === "multiplicacion") {
+    resultado = multiplicacion(v1, v2);
+  } else {
+  alert("Operación no válida");
+  return;
+}
+  
   else if (op == "raiz") {
     resultado = raiz(v1, v2);
   }
