@@ -1,5 +1,7 @@
 import { suma } from './funciones/suma.js';
 import { promedio } from './funciones/promedio.js';
+import { multiplicacion } from './funciones/multiplicacion.js';
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -25,6 +27,13 @@ function calcular() {
   } else if (op === "promedio") {
     resultado = promedio(v1, v2);
   }
+  else if (op === "multiplicacion") {
+    resultado = multiplicacion(v1, v2);
+  } else {
+  alert("Operación no válida");
+  return;
+}
+  
 
   document.getElementById("resultado").innerText = "Resultado: " + resultado;
 }
