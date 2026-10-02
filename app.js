@@ -3,20 +3,21 @@ import { promedio } from './funciones/promedio.js';
 import { multiplicacion } from './funciones/multiplicacion.js';
 import { maximo } from './funciones/maximo.js';
 import { raiz } from './funciones/raiz.js';
+import { tangente } from './funciones/tangente.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  document.getElementById("btnCalcular").addEventListener("click", calcular);
-
+  const boton = document.getElementById("btnCalcular");
+  if (boton) {
+    boton.addEventListener("click", calcular);
+  }
 });
 
 function calcular() {
-
   const op = document.getElementById("operacion").value;
   const v1 = parseFloat(document.getElementById("valor1").value);
   const v2 = parseFloat(document.getElementById("valor2").value);
 
-  if (isNaN(v1) || isNaN(v2)) {
+  if (isNaN(v1) || (op !== "tangente" && isNaN(v2))) {
     alert("Ingrese valores válidos");
     return;
   }
@@ -29,17 +30,16 @@ function calcular() {
     resultado = promedio(v1, v2);
   } else if (op === "maximo") {
     resultado = maximo(v1, v2);
-  }
-  else if (op === "multiplicacion") {
+  } else if (op === "multiplicacion") {
     resultado = multiplicacion(v1, v2);
-  } else {
-  alert("Operación no válida");
-  return;
-}
-  
-  else if (op == "raiz") {
+  } else if (op === "raiz") {
     resultado = raiz(v1, v2);
+  } else if (op === "tangente") {
+    resultado = tangente(v1);
+  } else {
+    alert("Operación no válida");
+    return;
   }
-  
+
   document.getElementById("resultado").innerText = "Resultado: " + resultado;
 }
