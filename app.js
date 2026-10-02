@@ -7,6 +7,7 @@ import { division } from './funciones/division.js';
 import { seno } from './funciones/seno.js';
 import { potencia } from './funciones/potencia.js';
 import { minimo } from './funciones/minimo.js';
+import { log } from './funciones/log.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -87,8 +88,13 @@ function calcular() {
     resultado = potencia(v1, v2);
 
   } else if (op === "minimo") {
-    resultado = minimo(v1, v2);
 
+    resultado = minimo(v1,v2);
+    
+  } else if (op === "log") {
+   
+    resultado = log(v1, v2)
+  
   } else {
     alert("Operación no válida");
     return;
