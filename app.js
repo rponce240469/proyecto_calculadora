@@ -7,6 +7,8 @@ import { division } from './funciones/division.js';
 import { seno } from './funciones/seno.js';
 import { potencia } from './funciones/potencia.js';
 import { minimo } from './funciones/minimo.js';
+import { tangente } from './funciones/tangente.js';
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -18,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Mostrar u ocultar Valor 2 según la operación
   function actualizarCampos() {
-    const esSeno = operacion.value === "seno";
+    const esUnario = operacion.value === "seno" || operacion.value === "tangente";
 
-    valor2.hidden = esSeno;
-    labelValor2.hidden = esSeno;
+    valor2.hidden = esUnario;
+    labelValor2.hidden = esUnario;
   }
 
   // Actualizar los campos al cambiar de operación
@@ -48,7 +50,7 @@ function calcular() {
   }
 
   // El seno solamente necesita el primer valor
-  if (op !== "seno" && isNaN(v2)) {
+  if (op !== "seno" && op !== "tangente" && isNaN(v2)) {
     alert("Ingrese un valor válido para Valor 2");
     return;
   }
@@ -81,6 +83,9 @@ function calcular() {
 
   } else if (op === "seno") {
     resultado = seno(v1);
+
+  } else if (op === "tangente"){
+    resultado = tangente(v1);
 
   } else if (op === "potencia") {
 
